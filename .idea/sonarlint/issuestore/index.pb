@@ -1,0 +1,27 @@
+
+Z
+*src/ua/nure/danylenko/practice5/Part1.java,3\b\3b8d05a4cb7959acddb4cba055cd388976b46718
+Y
+)src/ua/nure/danylenko/practice5/Spam.java,2\b\2bc0242ca3efad3b9b0ee99299f5f1d7b1519590
+9
+	part4.txt,4\f\4f86d4d346bfe70f3560325dee2ad0675cebc9ba
+Z
+*src/ua/nure/danylenko/practice5/Part3.java,7\f\7f37d9b39b095a65f6cd93f7d1c6b227056afebf
+Z
+*src/ua/nure/danylenko/practice5/Part4.java,4\e\4e832bafe4196c08a7cb8a2c02e48c4d344584a8
+Y
+)src/ua/nure/danylenko/practice5/Demo.java,a\6\a6bafb685d9db856a31cce9afe6937c5478b6410
+9
+	part5.txt,1\2\12f4fe21b501804c4d45aec5501872fe586dff8a
+Z
+*src/ua/nure/danylenko/practice5/Part5.java,3\6\3619da2ad0806fcf9219f787fe81ab87c28c1c57
+Z
+*src/ua/nure/danylenko/practice5/Part2.java,9\f\9fad4bcf4c8b9695a0efcb878909563ee4da1932
+^
+.src/ua/nure/danylenko/practice5/FileMaker.java,3\d\3d7296cb023dd980a919c7bdf1bbd81234917609
+Z
+*src/ua/nure/danylenko/practice5/Part6.java,c\e\ce2e7dd9f1f0a3653ae0124c163af525978b2e4e
+Z
+*src/ua/nure/danylenko/practice5/Child.java,3\f\3f59781bd2d3d94b09cb881bdbbb290e323af2c1
+`
+0src/ua/nure/danylenko/practice5/EnterStream.java,9\9\995ee0c627df6ee4b80b7cbecbd8aab09b5e8d2b

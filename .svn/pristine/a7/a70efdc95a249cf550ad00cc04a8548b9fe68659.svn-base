@@ -1,0 +1,108 @@
+package ua.nure.danylenko.practice5;
+
+public class Part3 {
+    private int counter;
+    private int counter2;
+    private Thread[] threads;
+    private static int NTHREADS;
+    private static int REPEATS;
+    private static int MILLS;
+    private boolean funk1=false;
+
+    private class Worker extends Thread {
+        @Override
+        public void run() {
+            if(!funk1){
+                nonSynchroCount();
+            }else {
+                synchroCount();
+            }
+        }
+    }
+
+    public Part3(int n, int k, int t) {
+        NTHREADS=n;
+        REPEATS=k;
+        MILLS=t;
+        threads = new Thread[NTHREADS];
+        for(int i=0; i<NTHREADS; i++){
+            threads[i]=new Worker();
+        }
+    }
+
+    public void reset() {
+        this.counter=0;
+        this.counter2=0;
+    }
+
+    public void test() {
+        start();
+        funk1=true;
+    }
+
+    public void testSync() {
+        threads = new Thread[NTHREADS];
+        for(int i=0; i<NTHREADS; i++){
+            threads[i]=new Worker();
+        }
+        start();
+    }
+
+    private void simpleCount(){
+        System.out.printf("%s %s%n", counter, counter2);
+        counter = counter + 1;
+        try {
+            Thread.sleep(Part3.MILLS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        counter2 = counter2 + 1;
+        System.out.printf("%s %s%n", counter, counter2);
+    }
+
+    private void synchroCount() {
+        int repeats=0;
+        while (repeats!=REPEATS) {
+            synchronized (this) {
+                simpleCount();
+            }
+            repeats = repeats + 1;
+        }
+        Thread.currentThread().interrupt();
+
+    }
+
+    private void nonSynchroCount() {
+        int repeats=0;
+        while (repeats!=REPEATS) {
+            simpleCount();
+            repeats = repeats + 1;
+        }
+        Thread.currentThread().interrupt();
+    }
+
+    public static void main(String[] args) {
+        Part3 p = new Part3(3, 5, 100);
+        p.test();
+        waitThreadsEnd(p.threads);
+        p.reset();
+        p.testSync();
+        waitThreadsEnd(p.threads);
+    }
+
+    private void start() {
+        for(Thread th:threads){
+            th.start();
+        }
+    }
+
+    private static void waitThreadsEnd(Thread[] threads){
+        for(Thread t:threads){
+            try {
+                t.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}

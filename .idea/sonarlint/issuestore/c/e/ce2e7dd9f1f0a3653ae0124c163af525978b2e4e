@@ -1,0 +1,8 @@
+
+[squid:S2274":Remove this call to "wait" or move it into a "while" loop.(˜ñ‹Ñıÿÿÿÿ8ÄÁëôØ-
+Vsquid:S2274":Remove this call to "wait" or move it into a "while" loop.(ÔŒ·˜8´ßĞñØ-
+bsquid:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8´ßĞñØ-
+Vsquid:S2274":Remove this call to "wait" or move it into a "while" loop.(ãÚİü8´ßĞñØ-
+Vsquid:S2274":Remove this call to "wait" or move it into a "while" loop.(ãÚİü8ĞÓÓñØ-
+[squid:S2274":Remove this call to "wait" or move it into a "while" loop.(˜ñ‹Ñıÿÿÿÿ8ÄÁëôØ-
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8´ßĞñØ-
